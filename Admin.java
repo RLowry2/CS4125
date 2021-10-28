@@ -1,30 +1,33 @@
+import Room.java;
+import Book.java;
 public class Admin {
 	public int AdminID;
 	public String username;
 	public String password;
 	
-	public User(String username, int AdminID) {
+	public void User(String username, int AdminID) {
 		this.username = username;
 		this.AdminID = AdminID;
 	}
 	
 	public String getUsername() {
-		return username;
+		return this.username;
 	}
 	
 	public void setUsername(String username) {
 		this.username = username;
 	}
 	
-	public String getAdminID() {
-		return AdminID;
+	public int getAdminID() {
+		return this.AdminID;
+	}
 	
 	public void setAdminID(int AdminID){
 		this.AdminID = AdminID;
 	}
 	
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 	
 	public void setPassword(String password) {

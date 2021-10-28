@@ -16,12 +16,12 @@ public class User {
 		this.username = username;
 	}
 	
-	public String getUserID() {
+	public int getUserID() {
 		return UserID;
 	}
 	
 	public void setUserID(int UserID){
-		this.userID = userID;
+		this.UserID = UserID;
 	}
 	
 	public String getPassword() {

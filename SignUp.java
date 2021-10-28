@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class signUp {
+public class SignUp {
 
     public int userID = 10000000;
     public ArrayList<int> users = new ArrayList<int>();
