@@ -14,7 +14,7 @@ public class Book {
 		return title;
 	}
 	
-	public String getBookID() {
+	public int getBookID() {
 		return bookID;
 	}
 	
