@@ -1,7 +1,7 @@
 package CS4125;
 public class Room {
 	public int roomID;
-	public int quantity;
+	public int availability;
 	
 	public Room(int roomID) {
 		this.roomID = roomID;
