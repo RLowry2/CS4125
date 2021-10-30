@@ -1,5 +1,8 @@
 body {
-    background-color: green;
-    color: blueviolet;
-    margin: 0;
+    background-color: red;
+    color: white;
+}
+
+.navbar {
+    background-color: blue;
 }
