@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span></a>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+        <h1>Sign Up</h1>
+        <form>
+            <label for="firstname">First name:</label><br>
+            <input type="text" id="firstname" name="firstname" value="First Name"><br>
+            <label for="lastname">Last name:</label><br>
+            <input type="text" id="lastname" name="lastname" value="Last Name">
+        </form>
+        <form action="/action_page.php">
+            <label for="StudentOrExternal">Are you a Student?</label>
+            <select id="StudentOrExternal" name="StudentOrExternal">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <input type="submit">
+        </form>
+        <button>Sign Up</button>
+    </div>
+      
+</body>
+
+</html>
