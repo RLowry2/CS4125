@@ -1,8 +1,8 @@
 body {
-    background-color: purple;
-    color: black;
+    background-color: rgb(98, 155, 182);
+    color: rgb(0, 0, 0);
 }
 
 .navbar {
-    background-color: green;
+    background-color: black;
 }

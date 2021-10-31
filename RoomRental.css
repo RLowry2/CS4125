@@ -1,4 +1,5 @@
 body {
+<<<<<<< Updated upstream
     background-color: purple;
     color: white;
 }
@@ -9,4 +10,12 @@ h2 {
 
 .navbar {
     background-color: green;
+=======
+    background-color: rgb(98, 155, 182);
+    color: rgb(0, 0, 0);
+}
+
+.navbar {
+    background-color: black;
+>>>>>>> Stashed changes
 }
