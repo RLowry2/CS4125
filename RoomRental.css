@@ -1,8 +1,12 @@
 body {
-    background-color: rgb(98, 155, 182);
+    background-color: purple;
+    color: white;
+}
+
+h2 {
     color: black;
 }
 
 .navbar {
-    background-color: rgba(192, 133, 194, 0.863);
+    background-color: green;
 }
