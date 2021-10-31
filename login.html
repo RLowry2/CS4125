@@ -1,30 +1,40 @@
-<!-- The Modal -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
-class="close" title="Close Modal">&times;</span>
+<html lang="en">
+<head> 
 
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <button><a href="home.html">Home</a></button>
+        <button><a href="bookings.html">Bookings</a></button>
+        </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html"><span class="glyphicon glyphicon-home"></span></a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+  <div class="container-fluid text-center">
+    <h1>Log In</h1>
+    <p>Please enter your username and password</p>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+    <form>
+      <label for="username"> Username: </label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password"> Password: </label><br>
+      <input type="text" id="password" name="password">
+    </form>
 
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+    <button><a href="home.html">Submit</a></button>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+  </div>
+
+</body>
+
+</html>

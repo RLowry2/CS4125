@@ -1,8 +1,8 @@
 body {
-    background-color: red;
+    background-color: rgb(98, 155, 182);
     color: white;
 }
 
 .navbar {
-    background-color: blue;
+    background-color: rgba(192, 133, 194, 0.863);
 }
