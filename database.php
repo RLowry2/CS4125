@@ -5,13 +5,14 @@
         $password = "ThisIsAPassword1";
         $dbname = "3976694_cs4125";
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Create connection
+        $conn = new mysqli($servername, $username, $password);
 
-        if($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-            echo "Connection failed";
+        // Check connection
+        if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
         }
-        return $conn;
+        echo "Connected successfully";
     }
     
     function closeConnection($conn) {
