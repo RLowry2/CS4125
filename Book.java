@@ -3,20 +3,20 @@ package com.springbootattempt.springbootattempt1;
 import javax.persistence.*;
  
 @Entity
-public class Skill {
+public class Book {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
-    private String label;
+    private String title;
     private String description;
    
-    public Skill() {
+    public Book() {
         super();
     }
  
-    public Skill(String label, String description) {
+    public Book(String title, String description) {
         super();
-        this.label = label;
+        this.title = title;
         this.description = description;
     }
  
@@ -28,12 +28,12 @@ public class Skill {
         this.id = id;
     }
  
-    public String getLabel() {
-        return label;
+    public String getTitle() {
+        return title;
     }
  
-    public void setLabel(String label) {
-        this.label = label;
+    public void setTitle(String title) {
+        this.title = title;
     }
  
     public String getDescription() {

@@ -13,10 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringbootattemptApplication implements CommandLineRunner {
  
     @Autowired
-    DeveloperRepository developerRepository;
+    UserRepository userRepository;
  
     @Autowired
-    SkillRepository skillRepository;
+    BookRepository bookRepository;
  
     public static void main(String[] args) {
         SpringApplication.run(SpringbootattemptApplication.class, args);
@@ -24,28 +24,28 @@ public class SpringbootattemptApplication implements CommandLineRunner {
  
     @Override
     public void run(String... args) throws Exception {
-        Skill javascript = new Skill("javascript", "Javascript language skill");
-        Skill ruby = new Skill("ruby", "Ruby language skill");
-        Skill emberjs = new Skill("emberjs", "Emberjs framework");
-        Skill angularjs = new Skill("angularjs", "Angularjs framework");
+        Book javascript = new Book("javascript", "Javascript language skill");
+        Book ruby = new Book("ruby", "Ruby language skill");
+        Book emberjs = new Book("emberjs", "Emberjs framework");
+        Book angularjs = new Book("angularjs", "Angularjs framework");
  
-        skillRepository.save(javascript);
-        skillRepository.save(ruby);
-        skillRepository.save(emberjs);
-        skillRepository.save(angularjs);
+        bookRepository.save(javascript);
+        bookRepository.save(ruby);
+        bookRepository.save(emberjs);
+        bookRepository.save(angularjs);
  
-        List<Developer> developers = new LinkedList<Developer>();
-        developers.add(new Developer("John", "Smith", "john.smith@example.com",
-                Arrays.asList(new Skill[] { javascript, ruby })));
-        developers.add(new Developer("Mark", "Johnson", "mjohnson@example.com",
-                Arrays.asList(new Skill[] { emberjs, ruby })));
-        developers.add(new Developer("Michael", "Williams", "michael.williams@example.com",
-                Arrays.asList(new Skill[] { angularjs, ruby })));
-        developers.add(new Developer("Fred", "Miller", "f.miller@example.com",
-                Arrays.asList(new Skill[] { emberjs, angularjs, javascript })));
-        developers.add(new Developer("Bob", "Brown", "brown@example.com",
-                Arrays.asList(new Skill[] { emberjs })));
-        developerRepository.save(developers);
+        List<User> users = new LinkedList<User>();
+        users.add(new User("John", "Smith", "john.smith@example.com",
+                Arrays.asList(new Book[] { javascript, ruby })));
+        users.add(new User("Mark", "Johnson", "mjohnson@example.com",
+                Arrays.asList(new Book[] { emberjs, ruby })));
+        users.add(new User("Michael", "Williams", "michael.williams@example.com",
+                Arrays.asList(new Book[] { angularjs, ruby })));
+        users.add(new User("Fred", "Miller", "f.miller@example.com",
+                Arrays.asList(new Book[] { emberjs, angularjs, javascript })));
+        users.add(new User("Bob", "Brown", "brown@example.com",
+                Arrays.asList(new Book[] { emberjs })));
+        userRepository.save(users);
     }
 }
  

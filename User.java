@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
  
 @Entity
-public class Developer {
+public class User {
  
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -22,11 +22,11 @@ public class Developer {
     @ManyToMany
     private List<Skill> skills;
  
-    public Developer() {
+    public User() {
         super();
     }
  
-    public Developer(String firstName, String lastName, String email, List<Skill> skills) {
+    public User(String firstName, String lastName, String email, List<Skill> skills) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -66,17 +66,17 @@ public class Developer {
         this.email = email;
     }
  
-    public List<Skill> getSkills() {
-        return skills;
+    public List<Book> getBooks() {
+        return books;
     }
  
-    public void setSkills(List<Skill> skills) {
-        this.skills = skills;
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
  
-    public boolean hasSkill(Skill skill) {
-        for(Skill containedSkill: getSkills()) {
-            if(containedSkill.getId() == skill.getId()) {
+    public boolean hasBook(Book book) {
+        for(Book containedBook: getBooks()) {
+            if(containedBook.getId() == book.getId()) {
                 return true;
             }
         }
