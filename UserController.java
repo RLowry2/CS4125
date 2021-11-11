@@ -36,7 +36,7 @@ public class UserController {
         newUser.setEmail(email);
         newUser.setFirstName(firstName);
         newUser.setLastName(lastName);
-        repository.save(newUser);
+        userRepository.save(newUser);
  
         model.addAttribute("user", newUser);
         model.addAttribute("books", bookRepository.findAll());

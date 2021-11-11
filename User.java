@@ -20,7 +20,7 @@ public class User {
     
     private String email;
     @ManyToMany
-    private List<Book> setBooks;
+    private List<Book> books;
  
     public User() {
         super();

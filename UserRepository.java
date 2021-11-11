@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
  
 public interface UserRepository extends CrudRepository<User, Long> {
  
-    Object User findOne(Long id);
+    Object findOne(Long id);
  
     void save(List<User> users);
  
