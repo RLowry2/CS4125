@@ -20,18 +20,18 @@ public class User {
     
     private String email;
     @ManyToMany
-    private List<Skill> skills;
+    private List<Book> setBooks;
  
     public User() {
         super();
     }
  
-    public User(String firstName, String lastName, String email, List<Skill> skills) {
+    public User(String firstName, String lastName, String email, List<Book> books) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.skills = skills;
+        this.books = books;
     }
  
     public long getId() {

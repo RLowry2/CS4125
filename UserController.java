@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UserController {
    
     @Autowired
-    UserRepository userRrepository;
+    UserRepository userRepository;
  
     @Autowired
     BookRepository bookRepository;
