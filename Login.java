@@ -50,9 +50,9 @@ public class Login {
         return id;
     }
 
-    public boolean compareID(long id) {
+    /*public boolean compareID(long id) {
         id.compareTo(*database id*)
-    }
+    }*/
 
     public String getPassword() {
         return password;
