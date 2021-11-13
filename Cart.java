@@ -1,9 +1,11 @@
 package com.springbootattempt.springbootattempt1;
  
+import java.util.ArrayList;
+import java.util.Scanner;
 import javax.persistence.*;
  
 @Entity
-public class Cart {
+public class Cart extends User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long bookId;
@@ -13,7 +15,9 @@ public class Cart {
     private long roomId;
     private String roomNumber;
     private String roomDescription;
-    private ArrayList<String> total;
+    private ArrayList<String> itemsList;
+    private float transaction;
+    private String userType;
    
     public Cart() {
         super();
@@ -21,9 +25,6 @@ public class Cart {
  
     public Cart(String title, String bookDescription,String roomNumber, String roomDescription) {
         
-        
-
-
         super();
         this.title = title;
         this.bookDescription = bookDescription;
@@ -31,17 +32,28 @@ public class Cart {
         this.roomNumber = roomNumber;
         this.roomDescription = roomDescription;
 
-        total.add(title);
-        total.add(roomNumber);
+    }
+
+
+    public CheckUser(){
+        long userId = User.userId;
+        Scanner scan = new Scanner(new File("Users.csv"));
+        
+    }
+
+
+    public AddToCart(String title, String roomNumber) {      
+        itemsList.add(title);
+        itemsList.add(roomNumber);
 
     }
- 
+
     public long getbookId() {
         return bookId;
     }
  
     public void setBookId(long bookId) {
-        this.id = bookId;
+        this.bookId = bookId;
     }
  
     public String getTitle() {
@@ -51,21 +63,10 @@ public class Cart {
     public void setTitle(String title) {
         this.title = title;
     }
- 
-    public String getBookDescription() {
-        return bookDescription;
-    }
- 
-    public void setBookDescription(String bookDescription) {
-        this.bookDescription = bookDescription;
-    }
 
 
 
-
-
-
-    public long getBookId() {
+    public long getRoomId() {
         return roomId;
     }
  
@@ -80,23 +81,33 @@ public class Cart {
     public void setRoomNumber(String roomNumber) {
         this.roomNumber = roomNumber;
     }
- 
-    public String getRoomDescription() {
-        return roomDescription;
-    }
- 
-    public void setRoomDescription(String roomDescription) {
-        this.roomDescription = roomDescription;
+
+    public float Cost(float price, float transaction, float discount){
+
+        if(userType == Student){
+            discount = price * 0.25;
+        }
+        else if(userType == Charity){
+            discount = price * 0.2;
+        }
+        else{
+            discount = 0;
+        }
+        transaction = price - discount;
+
+        return transaction;
+
     }
 
 
 
-    public long getTotal() {
-        return total;
+
+    public long getItemsList() {
+        return itemsList;
     }
  
-    public void setTotal(long total) {
-        this.total = total;
+    public void setItems(long itemsList) {
+        this.itemsList = itemsList;
     }
  
 }
