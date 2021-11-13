@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+import java.util.*;
 
 import javax.persistence.*;
  
@@ -14,38 +16,34 @@ public class Login {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
+    private String email;
     private String password;
-   
+    private String idString;
+
     public Login() {
         super();
     }
  
-    public Login(long id, String password) throws IOException {
+    Scanner sc = new Scanner(System.in);
+
+    id = sc.nextLong();
+    password = sc.nextLine();
+
+    public Login(String email, String password) {
         super();
-        this.id = id;
-        this.password = password;
-        try{
-            ArrayList<String> ar = new ArrayList<String>();
-            File csvFile = new File("Attempt.csv");
-            BufferedReader br = new BufferedReader(new FileReader(csvFile));
-            String line = "";
-            StringTokenizer st = null;
-            int lineNumber = 0;
-            int tokenNumber = 0;
-            while ((line = br.readLine()) != null) {
-                String[] arr = line.split(",");
-                System.out.println(arr[0]+" " + arr[1]);
-                lineNumber++;
+        this.email = email;
+        this.password = password; 
+        idString = Long.toString(id);  
+        Scanner scanner = new Scanner(new File("Attempt.csv"));
+        scanner.useDelimiter(",");
+        while(scanner.hasNext()){
+            if(scanner.next() == idString){
+                String correctEmail;
             }
         }
-        catch(IOException ex) {
-            ex.printStackTrace();
-        }
-        finally {
-
-        }
+        scanner.close();     
     }
- 
+
     public long getId() {
         return id;
     }
