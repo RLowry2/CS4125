@@ -33,14 +33,11 @@
             <label for="password">Password:</label><br>
             <input type="text" id="password" placeholder="Password">
         </form>
-        <form action="/action_page.php">
-            <label for="StudentOrExternal">Are you a Student?</label>
-            <select id="StudentOrExternal" name="StudentOrExternal">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-            <input type="submit">
-        </form>
+        <form name="loginForm" method="post" action="loginServlet">
+        Username: <input type="text" name="username"/> <br/>
+        Password: <input type="password" name="password"/> <br/>
+        <input type="submit" value="Login" />
+    </form>
         <button>Sign Up</button>
     </div>
       
