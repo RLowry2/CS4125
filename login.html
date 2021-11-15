@@ -26,13 +26,12 @@
 
   <div class="container-fluid text-center">
     <h1>Log In</h1>
-    <p>Please enter your ID and password</p>
+    <p>Please enter your email and password</p>
 
-    <form>
-      <label for="ID"> ID: </label><br>
-      <input type="text" id="ID" name="ID"><br>
-      <label for="password"> Password: </label><br>
-      <input type="text" id="password" name="password">
+    <form name="loginForm" method="post" action="loginServlet">
+      Username: <input type="text" name="email"/> <br/>
+      Password: <input type="password" name="password"/> <br/>
+      <input type="submit" value="Login" />
     </form>
 
     <button><a href="home.html">Submit</a></button>
