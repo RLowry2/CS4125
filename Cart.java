@@ -37,7 +37,30 @@ public class Cart extends User {
 
     public CheckUser(){
         long userId = User.userId;
-        Scanner scan = new Scanner(new File("Users.csv"));
+        userTyper = User.userType;
+
+        String userID = "1234";
+
+        boolean found = false;
+
+        try
+        {
+            Scanner x = new Scanner(new File("tester.txt"));
+            x.useDelimiter("[,\n]");
+
+            while(x.hasNext() && !found){
+                ID = x.next();
+
+                if(ID.equals(userID)){
+                    found = true;
+                }
+
+            }
+        }
+        catch (Exception e)
+        {
+
+        }
         
     }
 
@@ -90,16 +113,17 @@ public class Cart extends User {
         else if(userType == Charity){
             discount = price * 0.2;
         }
+        else if(userType == Admin){
+            discount = price * 0.5;
+        }
         else{
             discount = 0;
         }
-        transaction = price - discount;
 
+        transaction = price - discount;
         return transaction;
 
     }
-
-
 
 
     public long getItemsList() {

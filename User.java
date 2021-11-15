@@ -73,6 +73,14 @@ public class User {
     public void setBooks(List<Book> books) {
         this.books = books;
     }
+
+    public String userType() {
+        return userType;
+    }
+ 
+    public void userType(String userType) {
+        this.userType = userType;
+    }
  
     public boolean hasBook(Book book) {
         for(Book containedBook: getBooks()) {
