@@ -1,5 +1,6 @@
 package com.springbootattempt.springbootattempt1;
  
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.persistence.*;
@@ -10,11 +11,11 @@ public class Cart extends User {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long bookId;
     private String title;
-    private String bookDescription;
+    private float bookPrice;
 
     private long roomId;
     private String roomNumber;
-    private String roomDescription;
+    private float roomPrice;
     private ArrayList<String> itemsList;
     private float transaction;
     private String userType;
@@ -37,38 +38,12 @@ public class Cart extends User {
 
     public CheckUser(){
         long userId = User.userId;
-        userTyper = User.userType;
-
-        String userID = "1234";
-
-        boolean found = false;
-
-        try
-        {
-            Scanner x = new Scanner(new File("tester.txt"));
-            x.useDelimiter("[,\n]");
-
-            while(x.hasNext() && !found){
-                ID = x.next();
-
-                if(ID.equals(userID)){
-                    found = true;
-                }
-
-            }
-        }
-        catch (Exception e)
-        {
-
-        }
-        
+        userType = User.userType;
     }
-
 
     public AddToCart(String title, String roomNumber) {      
         itemsList.add(title);
         itemsList.add(roomNumber);
-
     }
 
     public long getbookId() {
@@ -88,7 +63,6 @@ public class Cart extends User {
     }
 
 
-
     public long getRoomId() {
         return roomId;
     }
@@ -96,7 +70,13 @@ public class Cart extends User {
     public void setRoomId(long roomId) {
         this.roomId = roomId;
     }
+
+    public float getRoomPrice() {
+        return roomPrice;
+    }
+
  
+
     public String getRoomNumber() {
         return roomNumber;
     }
@@ -133,6 +113,7 @@ public class Cart extends User {
     public void setItems(long itemsList) {
         this.itemsList = itemsList;
     }
+
  
 }
  
