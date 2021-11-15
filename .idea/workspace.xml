@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4d00178-5d75-4c4f-9d7a-6862fbaa372d" name="Changes" comment="adding admin/adminController/roomRepos/&#10;unfinished &#10;deleted gitignore files">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/AdminUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/BorrowBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/RoomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/BorrowBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/BorrowBook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/DeveloperList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/DeveloperList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/RoomRental.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/RoomRental.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/SpringbootattemptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/SpringbootattemptApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/checkout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1/signup.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main/java/com/springbootattempt/springbootattempt1" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="20xA26jSWyb6mEBYXhRyyRE3d51" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.springbootattempt.springbootattempt1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootattemptApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springbootattempt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.springbootattempt.springbootattempt1.SpringbootattemptApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4d00178-5d75-4c4f-9d7a-6862fbaa372d" name="Changes" comment="" />
+      <created>1636975660939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636975660939</updated>
+      <workItem from="1636975662188" duration="14527000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding admin/adminController/roomRepos/&#10;unfinished &#10;deleted gitignore files" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding admin/adminController/roomRepos/&#10;unfinished &#10;deleted gitignore files" />
+  </component>
+</project>
