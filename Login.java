@@ -6,6 +6,7 @@ import javax.persistence.*;
 public class Login {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+
     private String email;
     private String password;
 
@@ -21,11 +22,10 @@ public class Login {
 
     public String getEmail() {
         return email;
+
     }
 
     public String getPassword() {
         return password;
     }
 }
- 
-
