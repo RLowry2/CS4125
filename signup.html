@@ -25,20 +25,12 @@
 
     <div class="container-fluid text-center">
         <h1>Sign Up</h1>
-        <form>
-            <label for="firstname">First name:</label><br>
-            <input type="text" id="firstname" placeholder="First name"><br>
-            <label for="lastname">Last name:</label><br>
-            <input type="text" id="lastname" placeholder="Last name"><br>
-            <label for="password">Password:</label><br>
-            <input type="text" id="password" placeholder="Password">
-        </form>
-        <form name="loginForm" method="post" action="loginServlet">
-        Username: <input type="text" name="username"/> <br/>
-        Password: <input type="password" name="password"/> <br/>
-        <input type="submit" value="Login" />
+        <form name="signUpForm" method="post" action="home.html">
+            Firstname: <input type="text" name="firstname"/> <br/>
+            Lastname: <input type="text" name="lastname"/> <br/>
+            Password: <input type="password" name="password"/> <br/>
+        <input type="submit" value="signup" />
     </form>
-        <button>Sign Up</button>
     </div>
       
 </body>
