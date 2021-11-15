@@ -35,18 +35,6 @@ public class SpringbootattemptApplication implements CommandLineRunner {
         bookRepository.save(angularjs);
  
         List<User> users = new LinkedList<User>();
-        users.add(new User("John", "Smith", "john.smith@example.com",
-                Arrays.asList(new Book[] { javascript, ruby })));
-        users.add(new User("Mark", "Johnson", "mjohnson@example.com",
-                Arrays.asList(new Book[] { emberjs, ruby })));
-        users.add(new User("Michael", "Williams", "michael.williams@example.com",
-                Arrays.asList(new Book[] { angularjs, ruby })));
-        users.add(new User("Fred", "Miller", "f.miller@example.com",
-                Arrays.asList(new Book[] { emberjs, angularjs, javascript })));
-        users.add(new User("Bob", "Brown", "brown@example.com",
-                Arrays.asList(new Book[] { emberjs })));
-        userRepository.save(users);
+        users.add(new User());
     }
 }
- 
-

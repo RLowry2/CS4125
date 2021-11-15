@@ -1,38 +1,31 @@
 package com.springbootattempt.springbootattempt1;
- 
+
 import javax.persistence.*;
  
 @Entity
 public class Login {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private long id;
+
+    private String email;
     private String password;
-   
+
     public Login() {
         super();
     }
- 
-    public Login(long id, String password) {
+
+    public Login(String email, String password) {
         super();
-        this.id = id;
-        this.password = password;
-    }
- 
-    public long getId() {
-        return id;
+        this.email = email;
+        this.password = password;      
     }
 
+    public String getEmail() {
+        return email;
 
-    //TODO implement
-    public boolean compareID(long id) {
-        //id.compareTo(*database id*);
-        return true;
     }
 
     public String getPassword() {
         return password;
     }
 }
- 
-
