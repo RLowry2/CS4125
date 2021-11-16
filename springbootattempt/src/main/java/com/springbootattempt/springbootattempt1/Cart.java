@@ -36,11 +36,11 @@ public class Cart extends User {
     }
 
 
-    public CheckUser(){
+    public String CheckUser(){
         userType = User.userType;
     }
 
-    public AddToCart(String title, String roomNumber) {      
+    public String AddToCart(String title, String roomNumber) {      
         itemsList.add(title);
         itemsList.add(roomNumber);
     }
@@ -86,13 +86,13 @@ public class Cart extends User {
 
     public float Cost(float price, float transaction, float discount){
 
-        if(userType == Student){
+        if(userType == "Student"){
             discount = price * (1/4);
         }
-        else if(userType == Charity){
+        else if(userType == "Charity"){
             discount = price * (1/2);
         }
-        else if(userType == Admin){
+        else if(userType == "Admin"){
             discount = price * (1/2);
         }
         else{
