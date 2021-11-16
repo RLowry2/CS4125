@@ -2,7 +2,6 @@ package com.springbootattempt.springbootattempt1;
  
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 import javax.persistence.*;
  
 @Entity

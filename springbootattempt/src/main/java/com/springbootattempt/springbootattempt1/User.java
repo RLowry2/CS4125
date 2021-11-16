@@ -1,6 +1,9 @@
 package com.springbootattempt.springbootattempt1;
  
 import java.util.List;
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
  
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,6 +20,7 @@ public class User {
     private String firstName;
     private String lastName;
     public static String userType;
+    public static int typenumber;
     
     private String email;
     @ManyToMany
@@ -74,12 +78,42 @@ public class User {
         this.books = books;
     }
 
-    public String userType() {
-        return userType;
+
+    public void typenumber(int typenumber){
+
+        String row;
+        BufferedReader csvReader = new BufferedReader(new FileReader("Attempt.csv"));
+        while((row = csvReader.readLine()) != null) {
+            String[] data = row.split(",");
+            for(int i = 0; i <= data.length; i++){
+                if(data[i] == email){
+                    String str = data[i+4];
+                    try{
+                        typenumber = Integer.parseInt(str);
+                    }
+                    catch(NumberFormatException ex){
+                        
+                    }
+                }
+            }
+        }
     }
  
-    public void userType(String userType) {
-        id
+
+    public static String userType() {
+        switch (typenumber) {
+            case 1: userType = "Student";
+                    break;
+            case 2: userType = "Admin";
+                    break;
+            case 3: userType = "Charity";
+                    break;
+            case 4: userType = "Alumni";
+                    break;
+            default: userType = "";
+                    break;
+        }
+        return userType;
     }
  
     public boolean hasBook(Book book) {
