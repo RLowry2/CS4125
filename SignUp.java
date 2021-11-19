@@ -1,48 +1,38 @@
 package com.springbootattempt.springbootattempt1;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 import javax.persistence.*;
 
+@Entity
 public class SignUp {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private String firstname;
-  private String lastname;
+  private long id;
+  public static String firstname = "g";
+  public static String lastname = "gjhgy";
   private String password;
 
-  public SignUp() {
-    super();
-  }
+  public static void main(String[] args) throws IOException {
 
-  public SignUp(String firstname, String lastname, String password) throws IOException {
-    super();
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.password = password;
+    try (FileWriter writer = new FileWriter("user.csv", true)) {
 
-    try {
-      ArrayList<String> ar = new ArrayList<String>();
-      File csvFile = new File("Attempt.csv");
-      BufferedReader br = new BufferedReader(new FileReader(csvFile));
-      String line = "";
-      StringTokenizer st = null;
-      int lineNumber = 0;
-      int tokenNumber = 0;
-      while ((line = br.readLine()) != null) {
-        String[] arr = line.split(",");
-        System.out.println(arr[0] + " " + arr[1]);
-        lineNumber++;
-      }
-    } catch (IOException ex) {
-      ex.printStackTrace();
-    } finally {
+      StringBuilder sb = new StringBuilder();
+      sb.append(firstname);
+      sb.append(',');
+      sb.append(lastname);
+      sb.append('\n');
 
+      writer.write(sb.toString());
+
+      System.out.println("done!");
+
+    } catch (FileNotFoundException e) {
+      System.out.println(e.getMessage());
     }
+
   }
+
 }
