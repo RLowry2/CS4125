@@ -15,7 +15,7 @@ public class Home {
         super();
     }
 
-    public Home(String title, String roomNumber)
+    public Home(String title, String roomNumber) {
             
     }
 

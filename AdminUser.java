@@ -31,10 +31,10 @@ import java.util.List;
 @Entity
 public class AdminUser extends User {
 
-    public AdminUser(String firstName, String lastName, String userType, String email, List<Book> books) {
-        super(firstName, lastName, userType, email, books);
-        super().setUserType(userT)
-    }
+    // public AdminUser(String firstName, String lastName, String userType, String email, List<Book> books) {
+    //     super(firstName, lastName, userType, email, books);
+    //     super().setUserType(userT)
+    // }
 
     public AdminUser() {
          super();
