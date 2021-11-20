@@ -8,31 +8,20 @@ import javax.persistence.*;
 
 @Entity
 public class SignUp {
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private long id;
-  public static String firstname = "g";
-  public static String lastname = "gjhgy";
-  private String password;
+  
+	public static void logUser(String email, String password) throws IOException {
+		try (FileWriter writer = new FileWriter("user.csv", true)) {
 
-  public static void main(String[] args) throws IOException {
+		StringBuilder sb = new StringBuilder();
+		sb.append(email);
+		sb.append(',');
+		sb.append(password);
+		sb.append('\n');
 
-    try (FileWriter writer = new FileWriter("user.csv", true)) {
+		writer.write(sb.toString());
 
-      StringBuilder sb = new StringBuilder();
-      sb.append(firstname);
-      sb.append(',');
-      sb.append(lastname);
-      sb.append('\n');
-
-      writer.write(sb.toString());
-
-      System.out.println("done!");
-
-    } catch (FileNotFoundException e) {
-      System.out.println(e.getMessage());
-    }
-
-  }
-
+		} catch (FileNotFoundException e) {
+		System.out.println(e.getMessage());
+		}
+	}
 }
