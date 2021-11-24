@@ -1,4 +1,4 @@
-package com.example.liz_rebuild.serverlet;
+package com.example.springbootproject.serverlet;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

@@ -16,7 +16,7 @@ public class User {
     private long id;
     private String firstName;
     private String lastName;
-    private String userType = "standard";
+    protected static String userType = "standard";
     
     
     private String email;

@@ -1,2 +1,5 @@
-package com.example.springbootproject.model;public class Home {
+package com.example.springbootproject.model;
+
+public class Home {
+    
 }

@@ -1,7 +1,7 @@
 package com.example.springbootproject;
 
 import com.example.springbootproject.model.Book;
-import com.example.springbootproject.User;
+import com.example.springbootproject.model.User;
 import com.example.springbootproject.repository.BookRepository;
 import com.example.springbootproject.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,2 +1,5 @@
-package com.example.springbootproject.repository;public class CrudRepository {
+package com.example.springbootproject.repository;
+
+public class CrudRepository {
+    
 }

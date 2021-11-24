@@ -1,2 +1,5 @@
-package com.example.liz_rebuild.controller;public class LoginServlet {
+package com.example.springbootproject.serverlet;
+
+public class LoginServlet {
+
 }
