@@ -1,4 +1,4 @@
-package com.example.liz_rebuild.model;
+package com.example.springbootproject.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;

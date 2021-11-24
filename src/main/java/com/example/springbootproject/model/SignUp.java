@@ -1,4 +1,4 @@
-package com.example.liz_rebuild.model;
+package com.example.springbootproject.model;
 
 import java.io.BufferedReader;
 import java.io.File;

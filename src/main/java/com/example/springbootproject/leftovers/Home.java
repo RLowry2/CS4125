@@ -1,4 +1,4 @@
-package com.example.liz_rebuild.leftovers;
+package com.example.springbootproject.leftovers;
 
 import javax.persistence.*;
 
@@ -15,7 +15,7 @@ public class Home {
         super();
     }
 
-    public Home(String title, String roomNumber)
+    public Home(String title, String roomNumber){
             
     }
 

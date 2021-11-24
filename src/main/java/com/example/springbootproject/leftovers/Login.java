@@ -1,4 +1,4 @@
-package com.example.liz_rebuild.leftovers;
+package com.example.springbootproject.leftovers;
 
 import javax.persistence.*;
  

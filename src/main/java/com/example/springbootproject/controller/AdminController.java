@@ -1,8 +1,8 @@
-package com.example.liz_rebuild.controller;
+package com.example.springbootproject.controller;
 
-import com.example.liz_rebuild.model.Book;
-import com.example.liz_rebuild.model.Room;
-import com.example.liz_rebuild.repository.RoomRepository;
+import com.example.springbootproject.model.Book;
+import com.example.springbootproject.model.Room;
+import com.example.springbootproject.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

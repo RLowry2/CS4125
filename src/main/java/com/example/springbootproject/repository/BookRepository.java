@@ -1,6 +1,6 @@
-package com.example.liz_rebuild.repository;
+package com.example.springbootproject.repository;
  
-import com.example.liz_rebuild.model.Book;
+import com.example.springbootproject.model.Book;
 import org.springframework.data.repository.CrudRepository;
  
 import java.util.*;

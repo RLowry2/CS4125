@@ -1,6 +1,6 @@
-package com.example.liz_rebuild.repository;
+package com.example.springbootproject.repository;
 
-import com.example.liz_rebuild.model.Room;
+import com.example.springbootproject.model.Room;
 import org.springframework.data.repository.CrudRepository;
 
 public interface RoomRepository extends CrudRepository<Room, Long> {
