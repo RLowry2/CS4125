@@ -34,40 +34,43 @@ public class Book {
 		}
     }
 
-    public static void findBook() {
+    public static void removeBook(String book) throws CsvException, IOException {
+		CSVReader csvReader = new CSVReader(new FileReader("book.csv"));
+		List<String[]> csvInListFormat = csvReader.readAll();
+		csvInListFormat.forEach(x -> System.out.println(Arrays.toString(x)));		
+
 
 		String csv = "book.csv";
         BufferedReader br = null;
         String line = "";
         String csvSplit = ",";
         String[] read = new String[0];
+		int i = 0; 
+
         try {
             br = new BufferedReader(new FileReader(csv));
             String headerLine = br.readLine();
 
             while ((line = br.readLine()) != null) {
 				read = line.split(csvSplit);
-				if(read[0].equals("Book1")) {
-					removeBook();
+				if(read[0].equals(book)) {
+					break;
+				} else {
+					i++;
 				}
 			}
         }
         catch (IOException io) {
             System.out.println(io);
         }
+
+		csvInListFormat.remove(i+1);
+		FileWriter sw = new FileWriter("book.csv");
+		CSVWriter writer = new CSVWriter(sw);
+		writer.writeAll(csvInListFormat);
+		writer.close();
     }    
 	
-	public static void removeBook() {
-	// 	CSVReader csvReader = new CSVReader(new FileReader("user.csv"));
-	// 	List<String[]> row = csvReader.readAll();
-	// 	row.forEach(x -> System.out.println(Arrays.toString(x)));
-
-	// 	row.remove(rowNumber);
-	// 	FileWriter sw = new FileWriter("book.csv");
-	// 	CSVWriter writer = new CSVWriter(sw);
-	// 	writer.writeAll(row);
-	// 	writer.close();
-	}
 }
  
 
