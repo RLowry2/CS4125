@@ -37,21 +37,23 @@ public class Room {
     // }
 
     public static void addRoom(String number, int size, double price) throws IOException {
-		try (FileWriter writer = new FileWriter("room.csv", true)) {
+      try (FileWriter writer = new FileWriter("room.csv", true)) {
 
-		StringBuilder sb = new StringBuilder();
-		sb.append(number);
-		sb.append(',');
-		sb.append(size);
-		sb.append(',');
-		sb.append(price);
-		sb.append('\n');
+      StringBuilder sb = new StringBuilder();
+      sb.append(number);
+      sb.append(',');
+      sb.append(size);
+      sb.append(',');
+      sb.append(price);
+      sb.append('\n');
 
-		writer.write(sb.toString());
+      writer.write(sb.toString());
 
-		} catch (FileNotFoundException e) {
-		System.out.println(e.getMessage());
-		}
-	}
+      } catch (FileNotFoundException e) {
+      System.out.println(e.getMessage());
+      }
+    }
+
+    public static void remove 
 }
  

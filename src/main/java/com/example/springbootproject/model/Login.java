@@ -1,4 +1,4 @@
-package com.springbootattempt.springbootattempt1;
+package com.example.springbootproject.model;
 
 import java.io.FileReader;
 import java.util.*;
