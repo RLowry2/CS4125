@@ -27,7 +27,95 @@
         <h1>Welcome</h1>
         <p>This is a website for booking a room or borrowing a book in a library.</p>
     </div>
-      
-</body>
 
-</html>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    #books {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #books td, #books th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #books tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #books tr:hover {background-color: #ddd;}
+    
+    #books th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    #rooms{
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #rooms td, #rooms th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #rooms tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #rooms tr:hover {background-color: #ddd;}
+    
+    #rooms th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h1>Outstanding Transactions</h1>
+    
+    <table id="books">
+      <tr>
+        <th>Book Title</th>
+        <th>Author</th>
+        <th>Due By</th>
+      </tr>
+      <tr>
+        <td>Throne of Glass</td>
+        <td>Sarah J. Maas</td>
+        <td>11/11/21</td>
+      </tr>
+      
+    </table>
+    
+    <br>
+    <br>
+    <br>
+
+    <table id="rooms">
+        <tr>
+          <th>Room Number</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+        <tr>
+          <td>Room 8</td>
+          <td>11/11/21</td>
+          <td>14:00</td>
+        </tr>
+        
+      </table>
+    
+    </body>
+    </html>
+    
