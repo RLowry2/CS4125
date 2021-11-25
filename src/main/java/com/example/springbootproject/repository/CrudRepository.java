@@ -1,5 +1,5 @@
 package com.example.springbootproject.repository;
 
-public class CrudRepository {
-    
+public interface CrudRepository<T1, T2> {
+
 }

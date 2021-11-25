@@ -1,4 +1,4 @@
-package com.example.springbootproject.serverlet;
+package com.springbootattempt.springbootattempt1;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -82,13 +82,4 @@ public class SignUpServlet extends HttpServlet {
         // }
         // htmlResponse += "</html>";
     }
-    //TODO: Why is there a main here?
-    /*public static void main(String[] args) {
-        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
-                .getRequest();
-        HttpServletResponse response = ((ServletRequestAttributes) requestAttributes).getResponse();
-
-        doPost(request, response);
-    }*/
 }
