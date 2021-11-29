@@ -1,0 +1,10 @@
+RoomID,RoomQuantity,RoomAvailability
+Room1,1,true
+Room2,2,false
+Room3,3,false
+Room4,4,true
+Room5,5,true
+Room6,6,true
+Room7,7,false
+Room8,8,false
+Room9,9,true
