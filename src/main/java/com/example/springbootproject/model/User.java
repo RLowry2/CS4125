@@ -16,7 +16,7 @@ public class User {
     private long id;
     private String firstName;
     private String lastName;
-    protected static String userType = "standard";
+    public static String userType;
     
     
     private String email;
@@ -34,13 +34,7 @@ public class User {
         this.email = email;
         this.books = books;
     }
-    public User(String firstName, String lastName, String userType, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userType = userType;
-        this.email = email;
-    }
-
+ 
     public long getId() {
         return id;
     }

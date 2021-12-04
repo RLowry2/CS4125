@@ -15,7 +15,6 @@ public class BorrowBook {
         super();
     }
 
-    //TODO: should take bookId
     public BorrowBook(String title, String author) {
         super();
         this.title = title;
