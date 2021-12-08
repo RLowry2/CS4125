@@ -4,7 +4,10 @@ import java.util.List;
 
 public interface RoomDAO {
 
-    public List<Room> getAllRooms();
-    public Room getRoom(int roomId);
-    public void updateRoom(Room room);
+    public List<Book> getAllRooms();
+    public Book getRoomId(int bookId);
+    public String getRoomName(String name);
+    public double getRoomPrice(double price);
+    public void AddRoomToCart(String RoomNum, double price);
+
 }

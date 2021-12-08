@@ -5,7 +5,9 @@ import java.util.List;
 public interface BookDAO {
 
     public List<Book> getAllBooks();
-    public Book getBook(int bookId);
-    public void updateBook(Book book);
+    public Book getBookId(int bookId);
+    public String getBookTitle(String name);
+    public double getBookPrice(double price);
+    public void AddBookToCart(String title, String author, double price);
 
 }

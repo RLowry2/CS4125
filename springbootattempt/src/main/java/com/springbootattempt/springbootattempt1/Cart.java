@@ -9,7 +9,6 @@ import javax.persistence.*;
  
 @Entity
 public class Cart extends User {
-
     // @Id
     // @GeneratedValue(strategy=GenerationType.AUTO)
     // private long bookId;
@@ -98,20 +97,6 @@ public class Cart extends User {
 		System.out.println(e.getMessage());
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
 
     // public float getRoomPrice() {

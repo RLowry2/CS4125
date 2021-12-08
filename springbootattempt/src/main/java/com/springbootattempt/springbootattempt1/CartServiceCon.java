@@ -2,7 +2,7 @@ package com.springbootattempt.springbootattempt1;
 
 import java.util.List;
 
-public class CartServiceCon {
+public class CartServiceCon extends CartService{
     
     private final CartDAO CartDao;
     private final BookDAO BookDao;
