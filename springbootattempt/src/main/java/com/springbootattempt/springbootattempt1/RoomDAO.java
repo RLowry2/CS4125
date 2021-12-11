@@ -9,5 +9,6 @@ public interface RoomDAO {
     public String getRoomName(String name);
     public double getRoomPrice(double price);
     public void AddRoomToCart(String RoomNum, double price);
+    public void RemoveRoomToCart(String RoomNum, double price);
 
 }

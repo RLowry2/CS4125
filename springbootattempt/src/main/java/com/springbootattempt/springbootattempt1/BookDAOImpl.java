@@ -79,4 +79,14 @@ public class BookDAOImpl implements BookDAO {
 
          System.out.println(books);
       }
+
+      @Override
+      public void RemoveBookToCart(String bookId, double price) {
+        List<String> books = new ArrayList<>();
+  
+        books.remove(bookId);
+        books.remove(price);
+  
+           System.out.println(books);
+      }
 }

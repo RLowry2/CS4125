@@ -76,4 +76,14 @@ public class RoomDAOImpl implements RoomDAO {
 
          System.out.println(books);
       }
+
+    @Override
+    public void RemoveRoomToCart(String RoomNum, double price) {
+      List<String> books = new ArrayList<>();
+
+      books.remove(RoomNum);
+      books.remove(price);
+
+         System.out.println(books);
+    }
 }

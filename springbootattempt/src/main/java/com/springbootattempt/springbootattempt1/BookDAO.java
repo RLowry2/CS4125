@@ -9,5 +9,6 @@ public interface BookDAO {
     public String getBookTitle(String name);
     public double getBookPrice(double price);
     public void AddBookToCart(String title, String author, double price);
+    public void RemoveBookToCart(String bookId, double price);
 
 }
