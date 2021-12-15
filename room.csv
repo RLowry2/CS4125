@@ -1,3 +1,10 @@
-"Room","Quantity","Availibility"
-"Room1","1","true"
-"Room3","3","true"
+RoomID,RoomQuantity
+Room1,1
+Room2,2
+Room3,3
+Room4,4
+Room5,5
+Room6,6
+Room7,7
+Room8,8
+Room9,9
