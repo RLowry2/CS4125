@@ -31,32 +31,47 @@ import java.util.List;
 @Entity
 public class AdminUser extends User {
 
-    public AdminUser(String firstName, String lastName, String email) {
-        super(firstName, lastName, userType, email);
+    public Admin(long id, String firstName, String lastName, String email, ArrayList<Book> books) {
+        super();
+        this.id = id;
+        userType = "admin"; //default type
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.rentedBooks = books;
     }
 
-    public AdminUser() {
-         super();
+    //----------------------------------------actual functionality------------------------------------------------------
+
+    /*public void saveToCart(String title, String bookDescription, double bookPrice,
+                           String number, int size, double roomPrice) throws IOException {
+        Transaction.addBook(title, bookDescription, bookPrice);
+        Transaction.addRoom(number, size, roomPrice);
+    }*/
+    public void addRoom(String roomID, int roomQuantity, boolean roomAvailability) {
+        book.addRoom(roomID, roomQuantity, roomAvailability);
     }
 
-    public void addBook(long id, String title, String description ){
+    public void removeRoom(String room){
+    Room.removeRoom(room);
     }
 
-    public void removeBook(){
+    public void addBook(String title, String author, double price);
+        Book.addBook(title, author, price);
     }
 
-    public void editBook(){
+    public void removeBook(String book){
+         Book.removeBook(book)
     }
 
-    public void addRoom(){
-    }
+    public void addBookFromRepo(){}
 
-    public void removeRoom(){
-    }
+    public void removeBookFromRepo(){}
 
-    public void editRoom(){
+    public void addRoomFromRepo(){}
 
-    }
+    public void removeRoomFromRepo(){}
 }
+
 
 
