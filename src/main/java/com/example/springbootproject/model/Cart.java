@@ -1,122 +1,51 @@
 package com.example.springbootproject.model;
  
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.persistence.*;
+
+import com.opencsv.exceptions.CsvException;
  
 @Entity
-//TODO: why does this extend user???
 public class Cart extends User {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private long bookId;
-    private String title;
-    private float bookPrice;
-
-    private long roomId;
-    private String roomNumber;
-
-    private float roomPrice;
-    private ArrayList<String> itemsList;
-    private float transaction;
-    private String userType;
-   
-    public Cart() {
-        super();
-    }
-
-    public Cart(String title, String bookDescription,String roomNumber, String roomDescription) {
-        
-        super();
-        this.title = title;
-        this.bookDescription = bookDescription;
-
-        this.roomNumber = roomNumber;
-        this.roomDescription = roomDescription;
-
-    }
-
-
-    public CheckUser(){
-        //TODO: use getters??
-        long userId = User.userId;
-        userType = User.userType;
-    }
-
-    public AddToCart(String title, String roomNumber) {      
-        itemsList.add(title);
-        itemsList.add(roomNumber);
-    }
-
-    public long getbookId() {
-        return bookId;
-    }
  
-    public void setBookId(long bookId) {
-        this.bookId = bookId;
-    }
+	public static void addBook(String title, String author, double price) throws IOException, CsvException {
+		try (FileWriter writer = new FileWriter("cart.csv", true)) {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(title);
+		sb.append(',');
+		sb.append(author);
+		sb.append(',');
+		sb.append(price);
+		sb.append('\n');
+
+		writer.write(sb.toString());
+
+        Book.removeBook(title);
+
+		} catch (FileNotFoundException e) {
+		System.out.println(e.getMessage());
+		}
+	}
  
-    public String getTitle() {
-        return title;
-    }
- 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public static void addRoom(String number, int size, double price) throws IOException {
+		try (FileWriter writer = new FileWriter("cart.csv", true)) {
 
+		StringBuilder sb = new StringBuilder();
+		sb.append(number);
+		sb.append(',');
+		sb.append(size);
+		sb.append(',');
+		sb.append(price);
+		sb.append('\n');
 
-    public long getRoomId() {
-        return roomId;
-    }
- 
-    public void setRoomId(long roomId) {
-        this.roomId = roomId;
-    }
+		writer.write(sb.toString());
 
-    public float getRoomPrice() {
-        return roomPrice;
-    }
-
- 
-
-    public String getRoomNumber() {
-        return roomNumber;
-    }
- 
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public float Cost(float price, float transaction, float discount){
-
-        if(userType == Student){
-            discount = price * 0.25;
-        }
-        else if(userType == Charity){
-            discount = price * 0.2;
-        }
-        else if(userType == Admin){
-            discount = price * 0.5;
-        }
-        else{
-            discount = 0;
-        }
-
-        transaction = price - discount;
-        return transaction;
-
-    }
-
-
-    public long getItemsList() {
-        return itemsList;
-    }
- 
-    public void setItems(long itemsList) {
-        this.itemsList = itemsList;
-    }
-
- 
+		} catch (FileNotFoundException e) {
+		System.out.println(e.getMessage());
+		}
+	} 
 }
  

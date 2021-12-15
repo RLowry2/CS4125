@@ -1,10 +1,6 @@
 package com.example.springbootproject.controller;
+
  
-import com.example.springbootproject.model.Book;
-import com.example.springbootproject.model.User;
-import com.example.springbootproject.repository.BookRepository;
-import com.example.springbootproject.repository.RoomRepository;
-import com.example.springbootproject.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,9 +17,6 @@ public class UserController {
  
     @Autowired
     BookRepository bookRepository;
-
-    @Autowired
-    RoomRepository roomRepository;
  
     @RequestMapping("/user/{id}")
     public String user(@PathVariable Long id, Model model) {

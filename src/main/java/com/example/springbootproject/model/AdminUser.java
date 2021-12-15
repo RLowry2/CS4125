@@ -1,5 +1,6 @@
 package com.example.springbootproject.model;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,9 +32,10 @@ import java.util.List;
 @Entity
 public class AdminUser extends User {
 
-    public AdminUser(String firstName, String lastName, String email) {
-        super(firstName, lastName, userType, email);
-    }
+    // public AdminUser(String firstName, String lastName, String userType, String email, List<Book> books) {
+    //     super(firstName, lastName, userType, email, books);
+    //     super().setUserType(userT)
+    // }
 
     public AdminUser() {
          super();

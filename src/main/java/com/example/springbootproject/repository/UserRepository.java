@@ -1,17 +1,15 @@
 package com.example.springbootproject.repository;
-
-import com.example.springbootproject.model.User;
-
-public class UserRepository {
-
-    public Object findOne(Long id) {
-        return null;
-    }
-
-    public Object findAll() {
-        return null;
-    }
-
-    public void save(User newUser) {
-    }
+ 
+import java.util.List;
+ 
+import org.springframework.data.repository.CrudRepository;
+ 
+public interface UserRepository extends CrudRepository<User, Long> {
+ 
+    Object findOne(Long id);
+ 
+    void save(List<User> users);
+ 
 }
+ 
+

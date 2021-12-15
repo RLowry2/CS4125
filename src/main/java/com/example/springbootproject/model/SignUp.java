@@ -1,49 +1,63 @@
 package com.example.springbootproject.model;
 
 import java.io.BufferedReader;
-import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
-
+import java.util.Arrays;
+import java.util.List;
 import javax.persistence.*;
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
 
+
+@Entity
 public class SignUp {
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private String firstname;
-  private String lastname;
-  private String password;
+  
+	public static void logUser(String email, String password) throws IOException {
+		try (FileWriter writer = new FileWriter("user.csv", true)) {
 
-  public SignUp() {
-    super();
-  }
+		StringBuilder sb = new StringBuilder();
+		sb.append(email);
+		sb.append(',');
+		sb.append(password);
+		sb.append('\n');
 
-  public SignUp(String firstname, String lastname, String password) throws IOException {
-    super();
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.password = password;
+		writer.write(sb.toString());
 
-    try {
-      ArrayList<String> ar = new ArrayList<String>();
-      //TODO: should be in repository
-      File csvFile = new File("Attempt.csv");
-      BufferedReader br = new BufferedReader(new FileReader(csvFile));
-      String line = "";
-      StringTokenizer st = null;
-      int lineNumber = 0;
-      int tokenNumber = 0;
-      while ((line = br.readLine()) != null) {
-        String[] arr = line.split(",");
-        System.out.println(arr[0] + " " + arr[1]);
-        lineNumber++;
-      }
-    } catch (IOException ex) {
-      ex.printStackTrace();
-    } finally {
+		} catch (FileNotFoundException e) {
+		System.out.println(e.getMessage());
+		}
+	}
 
-    }
-  }
+	public static void loginUser(String email, String password) throws IOException, CsvException {
+		CSVReader csvReader = new CSVReader(new FileReader("user.csv"));
+
+
+		String csv = "user.csv";
+        BufferedReader br = null;
+        String line = "";
+        String csvSplit = ",";
+        String[] read = new String[0];
+		int i = 0; 
+
+		try {
+            br = new BufferedReader(new FileReader(csv));
+            String headerLine = br.readLine();
+
+            while ((line = br.readLine()) != null) {
+				read = line.split(csvSplit);
+				if(read[0].equals(email) && read[1].equals(password) ) {
+					System.out.println("User logged in.");
+					break;
+				} else {
+					i++;
+				}
+			}
+        }
+        catch (IOException io) {
+            System.out.println(io);
+        }
+    }    
 }

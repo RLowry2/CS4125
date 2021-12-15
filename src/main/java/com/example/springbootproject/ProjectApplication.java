@@ -1,41 +1,24 @@
 package com.example.springbootproject;
 
+import java.io.IOException;
+
 import com.example.springbootproject.model.Book;
-import com.example.springbootproject.model.User;
-import com.example.springbootproject.repository.BookRepository;
-import com.example.springbootproject.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.example.springbootproject.model.Cart;
+import com.example.springbootproject.model.SignUp;
+import com.opencsv.exceptions.CsvException;
+import com.example.springbootproject.model.Login;
+import com.example.springbootproject.model.Room;
 
-import java.util.LinkedList;
-import java.util.List;
-
-@SpringBootApplication
 public class ProjectApplication {
-    @Autowired
-    static UserRepository userRepository;
-
-    @Autowired
-    static BookRepository bookRepository;
-
-    public static void main(String[] args) {
-        ProjectApplication.run();
-        SpringApplication.run(ProjectApplication.class, args);
+    public static void main(String[] args) throws CsvException, IOException {
+        // SignUp.logUser("user5@something.com", "password5");
+        // Login.validateLogin("user1@something.com", "password1");
+        // Cart.AddToCart("Book Title", "Room 1");
+        Cart.addBook("Book3", "Author3", 4.39);
+        // Cart.addRoom("Room1", 5, 4.39);
+        // Book.addBook("Book1", "Author1", 1.00);
+        // Book.removeBook("Book4");
+        // Room.addRoom("Room1", 1, true);
+        // Room.removeRoom("Room2");
     }
-    public static void run(String... args) {
-        Book javascript = new Book("javascript", "Javascript language skill");
-        Book ruby = new Book("ruby", "Ruby language skill");
-        Book emberjs = new Book("emberjs", "Emberjs framework");
-        Book angularjs = new Book("angularjs", "Angularjs framework");
-
-        bookRepository.save(javascript);
-        bookRepository.save(ruby);
-        bookRepository.save(emberjs);
-        bookRepository.save(angularjs);
-
-        List<User> users = new LinkedList<User>();
-        users.add(new User());
-    }
-
 }
